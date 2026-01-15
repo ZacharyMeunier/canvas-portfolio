@@ -4,10 +4,10 @@ export default defineAppConfig({
     available: true,
   },
   profile: {
-    name: 'Hugo Richard',
+    name: 'Zachary Meunier',
     job: 'Frontend Architect and Designer',
-    email: 'contact@hrcd.fr',
-    phone: '(+33) 6 21 56 22 18',
+    email: 'zacmeu04@gmail.com',
+    phone: '(+1) 418-564-2877',
     picture: 'https://avatars.githubusercontent.com/u/71938701?v=4',
   },
   socials: {

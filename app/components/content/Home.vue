@@ -48,12 +48,6 @@
           data-animate
         />
 
-        <!-- cta -->
-        <HomeCTA
-          style="--stagger: 4"
-          data-animate
-        />
-
         <div
           style="--stagger: 5"
           data-animate
@@ -65,10 +59,6 @@
 
         <Divider class="my-9" />
 
-        <HomeFaq
-          style="--stagger: 6"
-          data-animate
-        />
       </div>
     </div>
   </section>

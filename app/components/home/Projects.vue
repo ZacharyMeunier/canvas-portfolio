@@ -49,9 +49,9 @@ const featuredProjects = computed(() => {
         :key="project.name"
         role="link"
         class="flex cursor-pointer items-center gap-2 rounded-lg px-4 py-2 hover:bg-neutral-900"
-        :to="project.release === '9999-12-31' ? localePath('/') : project.link"
+        :to="project.release === 'soon' ? localePath('/') : project.link"
         :aria-label="'go to ' + project.name + ' project website'"
-        :target="project.release === '9999-12-31' ? '_self' : '_blank'"
+        :target="project.release === 'soon' ? '_self' : '_blank'"
       >
         <span class="whitespace-nowrap font-medium">
           {{ project.name }}

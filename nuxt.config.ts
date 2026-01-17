@@ -72,14 +72,10 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-01-05',
 
   nitro: {
+    preset: 'vercel',
+
     experimental: {
       websocket: true,
-    },
-    prerender: {
-      autoSubfolderIndex: false,
-      crawlLinks: false,
-      failOnError: false,
-      routes: ['/en', '/fr'],
     },
   },
 

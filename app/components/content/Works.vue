@@ -17,7 +17,7 @@ const { data: projects } = await useAsyncData('projects', async () => {
     return new Date(b.release).getTime() - new Date(a.release).getTime()
   })
 }, {
-  watch: [locale], // Refetch if the language changes
+  watch: [locale],
 })
 </script>
 

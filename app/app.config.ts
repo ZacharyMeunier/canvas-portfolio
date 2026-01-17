@@ -17,8 +17,8 @@ export default defineAppConfig({
   },
   seo: {
     title: 'Portfolio',
-    description: 'Canvas is a simple but beautiful portfolio template for designers and developers built with Nuxt and Tailwind CSS. Made with ❤️ by HugoRCD',
-    url: 'https://canvas.hrcd.fr',
+    description: 'Portfolio Zachary Meunier',
+    url: 'https://zacharymeunier.com/en',
   },
   ui: {
     colors: {
@@ -59,25 +59,25 @@ export default defineAppConfig({
   link: [
     {
       rel: 'icon',
-      type: 'image/x-icon',
-      href: '/favicon.ico',
+      type: 'image/png',
+      href: '/Zach.png',
     },
     {
       rel: 'apple-touch-icon',
       sizes: '180x180',
-      href: '/apple-touch-icon.png',
+      href: '/Zach.png',
     },
     {
       rel: 'icon',
       type: 'image/png',
       sizes: '32x32',
-      href: '/favicon-32x32.png',
+      href: '/Zach.png',
     },
     {
       rel: 'icon',
       type: 'image/png',
       sizes: '16x16',
-      href: '/favicon-16x16.png',
+      href: '/Zach.png',
     },
     {
       rel: 'manifest',

@@ -60,10 +60,10 @@ export default defineNuxtConfig({
     },
   },
 
-  /*routeRules: {
+  routeRules: {
     // Needed to activate preview on Nuxt Studio
     '/': { prerender: false },
-  },*/
+  },
 
   experimental: {
     viewTransition: true,
@@ -76,9 +76,9 @@ export default defineNuxtConfig({
       websocket: true,
     },
     prerender: {
+      autoSubfolderIndex: false,
       crawlLinks: true,
-      fallback: true,
-      failOnError: false,
+      routes: ['/en', '/fr'],
     },
   },
 

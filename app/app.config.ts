@@ -8,10 +8,10 @@ export default defineAppConfig({
     job: 'Student',
     email: 'zacmeu04@gmail.com',
     phone: '(+1) 418-564-2877',
-    picture: 'https://avatars.githubusercontent.com/u/71938701?v=4',
+    picture: 'https://avatars.githubusercontent.com/u/103582055?s=400&u=005b4db6ef120d318dd726f20b96f4ec4e6d0507&v=4',
   },
   socials: {
-    github: 'https://github.com/HugoRCD',
+    github: 'https://github.com/ZacharyMeunier',
     itchio: 'https://backderiz.itch.io',
     linkedin: 'https://www.linkedin.com/in/zachary-meunier-b26538250',
   },

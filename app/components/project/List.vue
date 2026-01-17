@@ -1,23 +1,41 @@
 <script setup lang="ts">
-import projectsData from '~/data/projects'
-import { computed } from 'vue'
+import type { Collections } from '@nuxt/content'
+const { locale } = useI18n()
 const localePath = useLocalePath()
 
-const sortedProjects = computed(() => {
-  return projectsData
+// Fetch projects dynamically, like home page
+const { data: projects } = await useAsyncData('projects', async () => {
+  const collection = ('projects_' + locale.value) as keyof Collections
+  return await queryCollection(collection).all() as
+    | Collections['projects_en'][]
+    | Collections['projects_fr'][]
+}, {
+  watch: [locale],
+})
+
+// Sort future projects first, then by newest date
+const featuredProjects = computed(() => {
+  if (!projects.value) return []
+
+  const now = new Date()
+
+  return projects.value
     .filter(p => p.featured)
     .sort((a, b) => {
-      // '9999-12-31' first
-      if (a.release === '9999-12-31') return -1
-      if (b.release === '9999-12-31') return 1
+      const dateA = new Date(a.release)
+      const dateB = new Date(b.release)
 
-      // sort by real date descending
-      const dateA = new Date(a.release).getTime() || 0
-      const dateB = new Date(b.release).getTime() || 0
-      return dateB - dateA
+      const isFutureA = dateA > now
+      const isFutureB = dateB > now
+
+      if (isFutureA && !isFutureB) return -1
+      if (!isFutureA && isFutureB) return 1
+
+      return dateB.getTime() - dateA.getTime()
     })
 })
 </script>
+
 
 <template>
   <div class="flex w-full flex-col gap-4">

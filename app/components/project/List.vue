@@ -19,7 +19,7 @@ const localePath = useLocalePath()
       </span>
       <div class="mx-2 h-[0.1px] w-full bg-muted" />
       <span class="whitespace-nowrap text-muted">
-        {{ project.release === "soon" ? $t("global.soon") + "..." : project.release }}
+        {{ project.release === '9999-12-31' ? $t("global.soon") + "..." : project.release }}
       </span>
     </NuxtLink>
     <div class="mt-4 flex justify-center">

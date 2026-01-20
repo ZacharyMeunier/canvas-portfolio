@@ -111,6 +111,19 @@ export const collections = {
       ),
     }),
   }),
+  softwares: defineCollection({
+    type: 'data',
+    source: 'softwares.json',
+    schema: z.object({
+      items: z.array(
+        z.object({
+          name: z.string().nonempty(),
+          link: z.string().url(),
+          icon: z.string().nonempty(),
+        }),
+      ),
+    }),
+  }),
   faq_en: defineCollection({
     type: 'data',
     source: 'en/faq.json',

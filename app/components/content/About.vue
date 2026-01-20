@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const stack = await queryCollection('stack').first()
+const softwares = await queryCollection('softwares').first()
 </script>
 
 <template>
@@ -41,20 +41,20 @@ const stack = await queryCollection('stack').first()
       <div class="mb-6 flex flex-col gap-1">
         <h3 class="text-white-shadow font-newsreader italic text-3xl">
           <slot
-            name="stack_title"
+            name="softwares_title"
             mdc-unwrap="p"
           />
         </h3>
         <p>
           <slot
-            name="stack_description"
+            name="softwares_description"
             mdc-unwrap="p"
           />
         </p>
       </div>
       <div class="flex flex-wrap gap-4">
         <SpotlightCard
-          v-for="item in stack!.items"
+          v-for="item in softwares!.items"
           :key="item.name"
           white
         >

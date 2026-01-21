@@ -113,6 +113,19 @@ export const collections = {
   }),
   softwares: defineCollection({
     type: 'data',
+    source: 'languages.json',
+    schema: z.object({
+      items: z.array(
+        z.object({
+          name: z.string().nonempty(),
+          link: z.string().url(),
+          icon: z.string().nonempty(),
+        }),
+      ),
+    }),
+  }),
+  languages: defineCollection({
+    type: 'data',
     source: 'softwares.json',
     schema: z.object({
       items: z.array(

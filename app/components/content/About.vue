@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const softwares = await queryCollection('softwares').first()
+const languages = await queryCollection('languages').first()
 </script>
 
 <template>
@@ -55,6 +56,45 @@ const softwares = await queryCollection('softwares').first()
       <div class="flex flex-wrap gap-4">
         <SpotlightCard
           v-for="item in softwares!.items"
+          :key="item.name"
+          white
+        >
+          <NuxtLink
+            :to="item.link"
+            target="_blank"
+            :aria-label="item.name + ' link'"
+            class="flex gap-2 p-6"
+          >
+            <UIcon
+              :name="item.icon"
+              class="size-9"
+              :font-controlled="false"
+              :alt="item.name + ' logo'"
+              :aria-label="item.name + ' logo'"
+            />
+          </NuxtLink>
+        </SpotlightCard>
+      </div>
+    </div>
+    <Divider class="my-8" />
+    <div class="flex flex-col gap-3">
+      <div class="mb-6 flex flex-col gap-1">
+        <h3 class="text-white-shadow font-newsreader italic text-3xl">
+          <slot
+            name="languages_title"
+            mdc-unwrap="p"
+          />
+        </h3>
+        <p>
+          <slot
+            name="languages_description"
+            mdc-unwrap="p"
+          />
+        </p>
+      </div>
+      <div class="flex flex-wrap gap-4">
+        <SpotlightCard
+          v-for="item in languages!.items"
           :key="item.name"
           white
         >

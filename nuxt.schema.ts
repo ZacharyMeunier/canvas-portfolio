@@ -145,7 +145,7 @@ export default defineNuxtSchema({
           type: 'string',
           title: 'CV',
           description: 'Your cv.',
-          icon: 'lucide:file-text',
+          icon: 'lucide:linkedin',
           default: 'https://www.instagram.com/myusername',
         }),
       },

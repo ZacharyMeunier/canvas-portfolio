@@ -3,37 +3,37 @@
     {
       "name": "Unreal",
       "link": "https://nuxt.com/",
-      "icon": "custom:nuxt"
+      "icon": "custom:unreal"
     },
     {
       "name": "Unity",
       "link": "https://vuejs.org/",
-      "icon": "custom:vue"
+      "icon": "custom:unity"
     },
     {
       "name": "Godot",
       "link": "https://nestjs.com/",
-      "icon": "custom:nest"
+      "icon": "custom:godot"
     },
     {
       "name": "Android Studio",
       "link": "https://tailwindcss.com/",
-      "icon": "custom:tailwind"
+      "icon": "custom:android"
     },
     {
       "name": "Vue",
       "link": "https://www.prisma.io/",
-      "icon": "custom:prisma"
+      "icon": "custom:vue"
     },
     {
       "name": "Git",
       "link": "https://vercel.com/",
-      "icon": "custom:vercel"
+      "icon": "custom:git"
     },
     {
       "name": "Perforce",
       "link": "https://linear.app/",
-      "icon": "custom:linear"
+      "icon": "custom:perforce"
     }
   ]
 }

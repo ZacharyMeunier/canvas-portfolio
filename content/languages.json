@@ -3,37 +3,37 @@
     {
       "name": "C++",
       "link": "https://nuxt.com/",
-      "icon": "custom:nuxt"
+      "icon": "custom:cplusplus"
     },
     {
       "name": "C#",
       "link": "https://vuejs.org/",
-      "icon": "custom:vue"
+      "icon": "custom:csharp"
     },
     {
       "name": "Java",
       "link": "https://nestjs.com/",
-      "icon": "custom:nest"
+      "icon": "custom:java"
     },
     {
       "name": "CSS",
       "link": "https://tailwindcss.com/",
-      "icon": "custom:tailwind"
+      "icon": "custom:css"
     },
     {
       "name": "HTML",
       "link": "https://www.prisma.io/",
-      "icon": "custom:prisma"
+      "icon": "custom:html"
     },
     {
       "name": "Python",
       "link": "https://vercel.com/",
-      "icon": "custom:vercel"
+      "icon": "custom:python"
     },
     {
       "name": "PHP",
       "link": "https://linear.app/",
-      "icon": "custom:linear"
+      "icon": "custom:php"
     }
   ]
 }

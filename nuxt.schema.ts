@@ -127,19 +127,12 @@ export default defineNuxtSchema({
           icon: 'lucide:linkedin',
           default: 'https://www.linkedin.com/in/myusername',
         }),
-        instagram: field({
+        cv: field({
           type: 'string',
-          title: 'Instagram',
-          description: 'Your Instagram account.',
-          icon: 'lucide:instagram',
+          title: 'CV',
+          description: 'Your cv.',
+          icon: 'lucide:cv',
           default: 'https://www.instagram.com/myusername',
-        }),
-        spotify: field({
-          type: 'string',
-          title: 'Spotify',
-          description: 'Your Spotify account.',
-          icon: 'lucide:spotify',
-          default: 'https://open.spotify.com/user/myusername',
         }),
       },
     }),

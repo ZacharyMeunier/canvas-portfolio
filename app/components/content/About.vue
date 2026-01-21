@@ -38,6 +38,7 @@ const languages = await queryCollection('languages').first()
       mdc-unwrap="p"
     />
     <Divider class="my-8" />
+    <!-- Softwares -->
     <div class="flex flex-col gap-3">
       <div class="mb-6 flex flex-col gap-1">
         <h3 class="text-white-shadow font-newsreader italic text-3xl">
@@ -53,17 +54,16 @@ const languages = await queryCollection('languages').first()
           />
         </p>
       </div>
+
       <div class="flex flex-wrap gap-4">
         <SpotlightCard
           v-for="item in softwares!.items"
           :key="item.name"
           white
         >
-          <NuxtLink
-            :to="item.link"
-            target="_blank"
-            :aria-label="item.name + ' link'"
-            class="flex gap-2 p-6"
+          <div
+            class="flex gap-2 p-6 cursor-default"
+            :aria-label="item.name"
           >
             <UIcon
               :name="item.icon"
@@ -72,11 +72,14 @@ const languages = await queryCollection('languages').first()
               :alt="item.name + ' logo'"
               :aria-label="item.name + ' logo'"
             />
-          </NuxtLink>
+          </div>
         </SpotlightCard>
       </div>
     </div>
+
     <Divider class="my-8" />
+
+    <!-- Languages -->
     <div class="flex flex-col gap-3">
       <div class="mb-6 flex flex-col gap-1">
         <h3 class="text-white-shadow font-newsreader italic text-3xl">
@@ -92,17 +95,16 @@ const languages = await queryCollection('languages').first()
           />
         </p>
       </div>
+
       <div class="flex flex-wrap gap-4">
         <SpotlightCard
           v-for="item in languages!.items"
           :key="item.name"
           white
         >
-          <NuxtLink
-            :to="item.link"
-            target="_blank"
-            :aria-label="item.name + ' link'"
-            class="flex gap-2 p-6"
+          <div
+            class="flex gap-2 p-6 cursor-default"
+            :aria-label="item.name"
           >
             <UIcon
               :name="item.icon"
@@ -111,7 +113,7 @@ const languages = await queryCollection('languages').first()
               :alt="item.name + ' logo'"
               :aria-label="item.name + ' logo'"
             />
-          </NuxtLink>
+          </div>
         </SpotlightCard>
       </div>
     </div>

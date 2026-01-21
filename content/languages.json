@@ -1,0 +1,39 @@
+{
+  "items": [
+    {
+      "name": "C++",
+      "link": "https://nuxt.com/",
+      "icon": "custom:nuxt"
+    },
+    {
+      "name": "C#",
+      "link": "https://vuejs.org/",
+      "icon": "custom:vue"
+    },
+    {
+      "name": "Java",
+      "link": "https://nestjs.com/",
+      "icon": "custom:nest"
+    },
+    {
+      "name": "CSS",
+      "link": "https://tailwindcss.com/",
+      "icon": "custom:tailwind"
+    },
+    {
+      "name": "HTML",
+      "link": "https://www.prisma.io/",
+      "icon": "custom:prisma"
+    },
+    {
+      "name": "Python",
+      "link": "https://vercel.com/",
+      "icon": "custom:vercel"
+    },
+    {
+      "name": "PHP",
+      "link": "https://linear.app/",
+      "icon": "custom:linear"
+    }
+  ]
+}

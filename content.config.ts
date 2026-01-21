@@ -111,7 +111,7 @@ export const collections = {
       ),
     }),
   }),
-  softwares: defineCollection({
+  languages: defineCollection({
     type: 'data',
     source: 'languages.json',
     schema: z.object({
@@ -124,7 +124,7 @@ export const collections = {
       ),
     }),
   }),
-  languages: defineCollection({
+  softwares: defineCollection({
     type: 'data',
     source: 'softwares.json',
     schema: z.object({

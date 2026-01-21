@@ -1,94 +1,39 @@
 {
   "items": [
     {
-      "name": "Nuxt",
+      "name": "Unreal",
       "link": "https://nuxt.com/",
       "icon": "custom:nuxt"
     },
     {
-      "name": "Vue",
+      "name": "Unity",
       "link": "https://vuejs.org/",
       "icon": "custom:vue"
     },
     {
-      "name": "Nest",
+      "name": "Godot",
       "link": "https://nestjs.com/",
       "icon": "custom:nest"
     },
     {
-      "name": "TailwindCSS",
+      "name": "Android Studio",
       "link": "https://tailwindcss.com/",
       "icon": "custom:tailwind"
     },
     {
-      "name": "Prisma",
+      "name": "Vue",
       "link": "https://www.prisma.io/",
       "icon": "custom:prisma"
     },
     {
-      "name": "Vercel",
+      "name": "Git",
       "link": "https://vercel.com/",
       "icon": "custom:vercel"
     },
     {
-      "name": "Linear",
+      "name": "Perforce",
       "link": "https://linear.app/",
       "icon": "custom:linear"
-    },
-    {
-      "name": "Arc",
-      "link": "https://arc.net/",
-      "icon": "custom:arc"
-    },
-    {
-      "name": "Raycast",
-      "link": "https://raycast.com/",
-      "icon": "custom:raycast"
-    },
-    {
-      "name": "Notion",
-      "link": "https://www.notion.so/",
-      "icon": "custom:notion"
-    },
-    {
-      "name": "Cron",
-      "link": "https://calendar.cron.com/",
-      "icon": "custom:cron"
-    },
-    {
-      "name": "Spark",
-      "link": "https://sparkmailapp.com/",
-      "icon": "custom:spark"
-    },
-    {
-      "name": "1Password",
-      "link": "https://1password.com/",
-      "icon": "custom:onepassword"
-    },
-    {
-      "name": "Fig",
-      "link": "https://fig.io/",
-      "icon": "custom:fig"
-    },
-    {
-      "name": "Figma",
-      "link": "https://www.figma.com/",
-      "icon": "custom:figma"
-    },
-    {
-      "name": "Photoshop",
-      "link": "https://www.adobe.com/products/photoshop.html",
-      "icon": "custom:photoshop"
-    },
-    {
-      "name": "Illustrator",
-      "link": "https://www.adobe.com/products/illustrator.html",
-      "icon": "custom:illustrator"
-    },
-    {
-      "name": "Lightroom",
-      "link": "https://www.adobe.com/products/photoshop-lightroom.html",
-      "icon": "custom:lightroom"
     }
   ]
 }

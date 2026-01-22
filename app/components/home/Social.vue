@@ -3,7 +3,7 @@ const socialMediaRegexMap = [
   { regex: /github\.com/, name: 'GitHub', icon: 'custom:github' },
   { regex: /itch\.io/, name: 'ItchIo', icon: 'custom:itch' },
   { regex: /linkedin\.com/, name: 'LinkedIn', icon: 'custom:linkedin' },
-  { regex: /rxresu\cv/, name: 'CV', icon: 'custom:linkedin' },
+  { regex: /\/cv$/, name: 'CV', icon: 'custom:linkedin' },
 ]
 
 const { socials } = useAppConfig()

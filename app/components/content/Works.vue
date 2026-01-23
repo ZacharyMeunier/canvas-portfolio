@@ -19,7 +19,6 @@ const featuredProjects = computed(() => {
   const now = new Date()
 
   return projects.value
-    .filter((work) => work.featured)
     .sort((a, b) => {
       const dateA = new Date(a.release)
       const dateB = new Date(b.release)

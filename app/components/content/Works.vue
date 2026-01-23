@@ -2,22 +2,36 @@
 import type { Collections } from '@nuxt/content'
 
 const { locale } = useI18n()
+const localePath = useLocalePath()
 
 const { data: projects } = await useAsyncData('projects', async () => {
   const collection = ('projects_' + locale.value) as keyof Collections
-
-  // Fetch all projects
-  const items = await queryCollection(collection).all() as Collections['projects_en'][] | Collections['projects_fr'][]
-
-  // Sort by release date
-  // "9999-12-31" is considered "soon" and will appear first
-  return items.sort((a, b) => {
-    if (a.release === '9999-12-31') return -1
-    if (b.release === '9999-12-31') return 1
-    return new Date(b.release).getTime() - new Date(a.release).getTime()
-  })
+  return await queryCollection(collection).all() as
+    | Collections['projects_en'][]
+    | Collections['projects_fr'][]
 }, {
   watch: [locale],
+})
+
+const featuredProjects = computed(() => {
+  if (!projects.value) return []
+
+  const now = new Date()
+
+  return projects.value
+    .filter((work) => work.featured)
+    .sort((a, b) => {
+      const dateA = new Date(a.release)
+      const dateB = new Date(b.release)
+
+      const isFutureA = dateA > now
+      const isFutureB = dateB > now
+
+      if (isFutureA && !isFutureB) return -1
+      if (!isFutureA && isFutureB) return 1
+
+      return dateB.getTime() - dateA.getTime()
+    })
 })
 </script>
 
@@ -32,7 +46,7 @@ const { data: projects } = await useAsyncData('projects', async () => {
     <Divider class="mb-8 mt-2" />
     <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
       <ProjectCard
-        v-for="project in projects"
+        v-for="project in featuredProjects"
         :key="project.name"
         :project="project"
       />

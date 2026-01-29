@@ -39,11 +39,11 @@ const img = useImage()
 
     <!-- Bottom info panel -->
     <div class="absolute bottom-0 flex w-full justify-center">
-      <div class="rounded-t-lg border-x border-t border-white/10 border-b-transparent px-3 py-[5px] shadow-md backdrop-blur-md inline-flex items-center gap-3">
+      <div class="rounded-t-lg border-x border-t border-white/10 border-b-transparent px-3 py-[5px] shadow-md backdrop-blur-md inline-flex items-center gap-3 max-w-[90%]">
 
         <!-- Project info -->
-        <div class="flex items-center gap-2 max-w-[calc(100%-40px)]">
-      <span class="truncate text-sm font-semibold text-white/90">
+        <div class="flex items-center gap-2">
+      <span class="text-sm font-semibold text-white/90">
         {{ project.name }}
       </span>
           <span class="text-sm font-normal text-white/70">

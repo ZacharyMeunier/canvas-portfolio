@@ -62,7 +62,7 @@ const languages = await queryCollection('languages').first()
           white
         >
           <div
-            class="flex gap-2 p-6 cursor-default"
+            class="flex flex-col items-center gap-2 p-6 cursor-default"
             :aria-label="item.name"
           >
             <UIcon
@@ -72,6 +72,10 @@ const languages = await queryCollection('languages').first()
               :alt="item.name + ' logo'"
               :aria-label="item.name + ' logo'"
             />
+
+            <span class="text-sm font-medium text-center">
+              {{ item.name }}
+            </span>
           </div>
         </SpotlightCard>
       </div>
@@ -113,6 +117,10 @@ const languages = await queryCollection('languages').first()
               :alt="item.name + ' logo'"
               :aria-label="item.name + ' logo'"
             />
+
+            <span class="text-sm font-medium text-center">
+              {{ item.name }}
+            </span>
           </div>
         </SpotlightCard>
       </div>

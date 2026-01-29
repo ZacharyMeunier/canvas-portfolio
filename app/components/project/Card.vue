@@ -36,19 +36,23 @@ const img = useImage()
         :aria-label="project.name + ' project image'"
       />
     </div>
-
+    
     <!-- Bottom info panel -->
     <div class="absolute bottom-0 flex w-full justify-center">
       <div class="rounded-t-lg border-x border-t border-white/10 border-b-transparent px-2 py-[5px] shadow-md backdrop-blur-md sm:w-2/3">
         <div class="flex items-center justify-between gap-2">
-          <div class="flex items-center gap-2">
-            <span class="whitespace-nowrap text-sm font-semibold text-white/90">
-              {{ project.name }}
-            </span>
-            <span class="whitespace-nowrap text-sm font-semibold text-white/90">
-              {{ project.release === '9999-12-31' ? $t('global.soon') + '...' : new Date(project.release).getFullYear() }}
-            </span>
+
+          <!-- Project info -->
+          <div class="flex flex-col items-center gap-1">
+        <span class="truncate max-w-[150px] text-sm font-semibold text-white/90 text-center">
+          {{ project.name }}
+        </span>
+            <span class="text-sm font-normal text-white/70 text-center">
+          {{ project.release === '9999-12-31' ? $t('global.soon') + '...' : new Date(project.release).getFullYear() }}
+        </span>
           </div>
+
+          <!-- Arrow icon -->
           <div
             class="flex items-center justify-center rounded-full border border-transparent p-1 shadow-md backdrop-blur-md transition-all duration-500 group-hover:-rotate-45 group-hover:border-white/10"
           >
@@ -57,6 +61,7 @@ const img = useImage()
               class="size-3 text-white"
             />
           </div>
+
         </div>
       </div>
     </div>

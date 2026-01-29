@@ -14,7 +14,7 @@ export default defineAppConfig({
     github: 'https://github.com/ZacharyMeunier',
     itchio: 'https://backderiz.itch.io',
     linkedin: 'https://www.linkedin.com/in/zachary-meunier-b26538250',
-    cv: 'https://v4.rxresu.me/zacmeu04/cv',
+    cv: '/CV_ZacharyMeunier2026.pdf',
   },
   seo: {
     title: 'Portfolio',

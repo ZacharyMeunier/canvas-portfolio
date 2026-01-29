@@ -38,11 +38,6 @@ const languages = await queryCollection('languages').first()
       mdc-unwrap="p"
     />
     <Divider class="my-8" />
-    <slot
-      name="experiences"
-      mdc-unwrap="p"
-    />
-    <Divider class="my-8" />
     <!-- Softwares -->
     <div class="flex flex-col gap-3">
       <div class="mb-6 flex flex-col gap-1">

@@ -38,44 +38,49 @@ const languages = await queryCollection('languages').first()
       mdc-unwrap="p"
     />
     <Divider class="my-8" />
+    <slot
+      name="experiences"
+      mdc-unwrap="p"
+    />
+    <Divider class="my-8" />
     <!-- Softwares -->
     <div class="flex flex-col gap-3">
       <div class="mb-6 flex flex-col gap-1">
         <h3 class="text-white-shadow font-newsreader italic text-3xl">
-          <slot
-            name="softwares_title"
-            mdc-unwrap="p"
-          />
+          <slot name="softwares_title" mdc-unwrap="p" />
         </h3>
         <p>
-          <slot
-            name="softwares_description"
-            mdc-unwrap="p"
-          />
+          <slot name="softwares_description" mdc-unwrap="p" />
         </p>
       </div>
 
-      <div class="flex flex-wrap gap-4">
+      <!-- GRID -->
+      <div class="grid grid-cols-5 gap-4 items-stretch">
         <SpotlightCard
           v-for="item in softwares!.items"
           :key="item.name"
           white
+          class="h-full"
         >
           <div
-            class="flex flex-col items-center gap-2 p-6 cursor-default"
+            class="flex flex-col items-center justify-center gap-2 p-6 h-full cursor-default"
             :aria-label="item.name"
           >
+            <!-- ICON -->
             <UIcon
               :name="item.icon"
-              class="size-9"
+              class="w-10 h-10 shrink-0"
               :font-controlled="false"
               :alt="item.name + ' logo'"
               :aria-label="item.name + ' logo'"
             />
 
-            <span class="text-sm font-medium text-center">
-              {{ item.name }}
-            </span>
+            <!-- NAME -->
+            <span
+              class="text-sm font-medium text-center leading-tight line-clamp-2 h-[2.5em]"
+            >
+          {{ item.name }}
+        </span>
           </div>
         </SpotlightCard>
       </div>
@@ -87,40 +92,40 @@ const languages = await queryCollection('languages').first()
     <div class="flex flex-col gap-3">
       <div class="mb-6 flex flex-col gap-1">
         <h3 class="text-white-shadow font-newsreader italic text-3xl">
-          <slot
-            name="languages_title"
-            mdc-unwrap="p"
-          />
+          <slot name="languages_title" mdc-unwrap="p" />
         </h3>
         <p>
-          <slot
-            name="languages_description"
-            mdc-unwrap="p"
-          />
+          <slot name="languages_description" mdc-unwrap="p" />
         </p>
       </div>
 
-      <div class="flex flex-wrap gap-4">
+      <!-- GRID -->
+      <div class="grid grid-cols-5 gap-4 items-stretch">
         <SpotlightCard
           v-for="item in languages!.items"
           :key="item.name"
           white
+          class="h-full"
         >
           <div
-            class="flex gap-2 p-6 cursor-default"
+            class="flex flex-col items-center justify-center gap-2 p-6 h-full cursor-default"
             :aria-label="item.name"
           >
+            <!-- ICON -->
             <UIcon
               :name="item.icon"
-              class="size-9"
+              class="w-10 h-10 shrink-0"
               :font-controlled="false"
               :alt="item.name + ' logo'"
               :aria-label="item.name + ' logo'"
             />
 
-            <span class="text-sm font-medium text-center">
-              {{ item.name }}
-            </span>
+            <!-- NAME -->
+            <span
+              class="text-sm font-medium text-center leading-tight line-clamp-2 h-[2.5em]"
+            >
+          {{ item.name }}
+        </span>
           </div>
         </SpotlightCard>
       </div>

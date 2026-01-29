@@ -64,7 +64,7 @@ const languages = await queryCollection('languages').first()
             <!-- ICON -->
             <UIcon
               :name="item.icon"
-              class="w-10 h-10 shrink-0"
+              class="w-16 h-16 shrink-0"
               :font-controlled="false"
               :alt="item.name + ' logo'"
               :aria-label="item.name + ' logo'"
@@ -109,7 +109,7 @@ const languages = await queryCollection('languages').first()
             <!-- ICON -->
             <UIcon
               :name="item.icon"
-              class="w-10 h-10 shrink-0"
+              class="w-16 h-16 shrink-0"
               :font-controlled="false"
               :alt="item.name + ' logo'"
               :aria-label="item.name + ' logo'"

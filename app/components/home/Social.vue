@@ -3,7 +3,7 @@ const socialMediaRegexMap = [
   { regex: /github\.com/, name: 'GitHub', icon: 'custom:github' },
   { regex: /itch\.io/, name: 'ItchIo', icon: 'custom:itch' },
   { regex: /linkedin\.com/, name: 'LinkedIn', icon: 'custom:linkedin' },
-  { regex: /\/cv$/, name: 'CV', icon: 'custom:cv' },
+  { regex: /\/CV$/, name: 'CV', icon: 'custom:cv' },
 ]
 
 const { socials } = useAppConfig()
@@ -39,7 +39,7 @@ const mappedSocials = Object.values(socials).map((link) => {
           :aria-label="social.name + ' logo'"
         />
       </a>
-      
+
       <NuxtLink
         v-else
         :to="social.link"
